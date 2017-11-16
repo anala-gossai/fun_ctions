@@ -14,7 +14,6 @@ PasteNA <- function(...,
     
     # Example:
     #   paste3("a", NA, "n", NA, "a", NA, "l", "a", sep = "")
-    
     L <- list(...)
     
     L <- lapply(L, function(x) {x[is.na(x)] <- ""; x})

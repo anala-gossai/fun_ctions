@@ -1,2 +1,2 @@
 # fun_ctions
-Useful FUNctions
+Useful and **FUN** functions to mitigate everyday annoyances. 

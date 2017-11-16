@@ -13,14 +13,21 @@ RecodeMissingValstoNA <- function(data,
   #   missing_vals: a list of the ways in which missing values are
   #                 coded as missing. Defaults to "Unknown"
   
+  # Output: a data frame with the missing values coded as NA,
+  # with the same factor levels maintained 
+  
   # Example:
+  # library(dplyr)
+  # race <- c("A", "A", "B", "Unknown", "C", "D")
+  # agegroup <- c("10-20", "20-30", "Unknown/missing", "Unknown/missing", "65-75", "35-45")
+  # demographics <- cbind(race, agegroup) %>% 
+  #     as.data.frame()
   # RecodeMissingValstoNA(data = demographics,
   #                       column_names = c("race", "agegroup"),
   #                       missing_vals = c('Unknown', 'Unknown/missing'))    
-
-  # Output: a data frame with the missing values coded as NA,
-  # with the same factor levels maintained 
-  if(column_names == "ALL") {
+  require(dplyr)  
+  
+  if(all(column_names == "ALL")) {
     column_names = colnames(data)
   }
   

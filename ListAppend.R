@@ -9,6 +9,13 @@ ListAppend <- function(lst,
     # Output
     #   A list which has the original list 
     #   with the new item added to it
+    
+    # Example:
+    # x <- NULL
+    # x <- ListAppend(x, "a")
+    # x <- ListAppend(x, "b")
+    # x <- ListAppend(x, "c")
+    # print(x)
     lst[[length(lst)+1]] <- obj
     return(lst)
 }
