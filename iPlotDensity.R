@@ -38,15 +38,15 @@ iPlotDensity <- function(data,
     
     if(colour_scheme_hex == "Auto") {
         
-        colour_scheme = c("#242582",
-                          "#552D67",
-                          "#F64C72",
-                          "#99738E",
-                          "#05386B",
-                          "#379683",
-                          "#5CDB95",
-                          "#190061",
-                          "#3500D3")
+        colour_scheme = colorRampPalette(
+            c("#242582",
+              "#552D67",
+              "#F64C72",
+              "#99738E",
+              "#05386B",
+              "#190061",
+              "#3500D3")
+            )(length(group_var_vals))
     } else {
         
         colour_scheme = colour_scheme_hex
