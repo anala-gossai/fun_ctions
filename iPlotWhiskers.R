@@ -37,7 +37,7 @@ iPlotWhiskers <- function(data,
     
     cts_var_vals <- unique(cts_vars)
     
-    if(colour_scheme_hex == "Auto") {
+    if (colour_scheme_hex == "Auto") {
         
         colour_scheme = colorRampPalette(
             c("#242582",

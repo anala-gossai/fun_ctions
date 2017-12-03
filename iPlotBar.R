@@ -53,7 +53,7 @@ iPlotBar <- function(data,
         mutate(n = ifelse(is.na(n), 0, n)) %>%
         arrange_(group_var, cat_var)
     
-    if(colour_scheme_hex == "Auto") {
+    if (colour_scheme_hex == "Auto") {
         
         colour_scheme = colorRampPalette(
             c("#242582",

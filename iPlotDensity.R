@@ -36,7 +36,7 @@ iPlotDensity <- function(data,
     
     group_var_vals <- unique(data[[group_var]])
     
-    if(colour_scheme_hex == "Auto") {
+    if (colour_scheme_hex == "Auto") {
         
         colour_scheme = colorRampPalette(
             c("#242582",
