@@ -2,6 +2,7 @@ iPlotWhiskers <- function(data,
                           cts_vars, 
                           group_var,
                           x_axis_label = gsub('_|\\.', ' ', group_var),
+                          y_axis_label = gsub('_|\\.', ' ', cts_vars),
                           colour_scheme_hex = "Auto") {
     # Summary: show whiskers plot of a continuous 
     # variable by a categorical variable
@@ -12,8 +13,11 @@ iPlotWhiskers <- function(data,
     #   cts_vars: the continuous variable(s) of interest
     #   group_var: the categorical variable to divide up
     #            the continuous variable
-    #   x_axis_label: the label related to what cts_var represents
+    #   x_axis_label: the label related to what group_var represents
     #                 to display along x-axis; defaults to cleaner
+    #                 version of group_var
+    #   y_axis_label: the label related to what cts_var represents
+    #                 to display along y-axis; defaults to cleaner
     #                 version of cts_var
     #   colour_scheme_hex: hex colours of preference; has default
     #                      colour scheme available 
@@ -26,7 +30,8 @@ iPlotWhiskers <- function(data,
     # data(iris)
     # iPlotWhiskers(data = iris,
     #               cts_vars = c("Petal.Length", "Petal.Width"),
-    #               group_var = "Species")
+    #               group_var = "Species",
+    #               y_axis_label = "Length (cm)")
     require(dplyr) # Version ‘0.5.0’
     require(highcharter) # Version ‘0.4.0’
     
@@ -61,5 +66,7 @@ iPlotWhiskers <- function(data,
             hc_legend(itemHoverStyle =  list(color = '#FF8300'))
     }
     
-    chart
+    chart %>% 
+        hc_xAxis(title = list(text = x_axis_label)) %>% 
+        hc_yAxis(title = list(text = y_axis_label))
 }
