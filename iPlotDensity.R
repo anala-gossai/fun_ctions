@@ -49,7 +49,9 @@ iPlotDensity <- function(data,
             )(length(group_var_vals))
     } else {
         
-        colour_scheme = colour_scheme_hex
+        colour_scheme = colorRampPalette(
+            colour_scheme_hex
+            )(length(group_var_vals))
     }
     
     chart <- highchart()

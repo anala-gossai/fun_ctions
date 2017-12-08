@@ -50,7 +50,9 @@ iPlotWhiskers <- function(data,
         )(length(cts_var_vals))
     } else {
         
-        colour_scheme = colour_scheme_hex
+        colour_scheme = colorRampPalette(
+            colour_scheme_hex
+            )(length(cts_var_vals))
     }
     
     chart <- highchart()
