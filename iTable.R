@@ -30,8 +30,8 @@ iTable <- function(table_data,
     require(dplyr) # Version ‘0.5.0’
     require(DT) # Version ‘0.2’
     
-    numeric.columns <- sapply(table_data, is.numeric)
-    format.columns <- names(table_data[ , numeric.columns])
+    numeric_columns <- sapply(table_data, is.numeric)
+    format_columns <- names(table_data[, numeric_columns])
     
     if (simple == 't') {
         
@@ -62,6 +62,6 @@ iTable <- function(table_data,
     }
     
     dt %>%
-        formatRound(columns = format.columns, 
+        formatRound(columns = format_columns, 
                     round_digits)
 }
