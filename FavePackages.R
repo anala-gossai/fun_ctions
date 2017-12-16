@@ -1,3 +1,4 @@
+library(broom)
 library(compareGroups)
 library(corrplot)
 library(data.table)
