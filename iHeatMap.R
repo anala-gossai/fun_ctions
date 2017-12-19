@@ -2,7 +2,28 @@ iHeatMap <- function(object,
                      max_colour = "#18bc9c",
                      min_colour = "#FF8300",
                      ...) {
+    # Summary: create an interactive heatmap 
+    # of correlation values 
     
+    # Arg: 
+    #   object: a matrix of correlation values, 
+    #           that range between -1 and 1 
+    #   max_colour: the colour used for 1
+    #   min_colour: the colour used for -1
+    #   ... : other arguments passed to hchart
+    #         from highcharter 
+    
+    # Output: An interactive heatmap 
+    # displaying the correlation matrix 
+    
+    # Example:
+    # set.seed(416905)
+    # matrix <- matrix(runif(100, min = -1, max = 1), 
+    #                  nrow = 10, 
+    #                  ncol = 10)
+    # colnames(matrix) <- letters[1:10]
+    # rownames(matrix) <- letters[1:10]
+    # iHeatMap(matrix)
     require(highcharter)
     require(tidyr)
     require(dplyr)
@@ -36,7 +57,7 @@ iHeatMap <- function(object,
                  ; }")
     
     cor_colr <- list(list(0, min_colour),
-                     list(0.5, '#F8F5F5'),
+                     list(0.5, '#F8F5F5'), # white is 0
                      list(1, max_colour))
     
     highchart() %>% 

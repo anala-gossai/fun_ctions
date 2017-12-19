@@ -22,7 +22,8 @@ AddLabel <- function(data,
     # AddLabel(data = iris,
     #          column_dict = iris_dict) %>% 
     #     View()
-    require(dplyr)
+    require(dplyr) # Version ‘0.5.0’
+    require(Hmisc) # Version ‘4.0.3’
     
     label_columns <- names(column_dict)  
     
@@ -33,7 +34,7 @@ AddLabel <- function(data,
         
         if(!is.null(col)) {
             
-            label(data[, col]) <- current_label
+            Hmisc::label(data[, col]) <- current_label
             data <- data 
         }
     }
