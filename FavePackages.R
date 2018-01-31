@@ -1,30 +1,30 @@
-library(broom)
-library(compareGroups)
-library(corrplot)
-library(data.table)
-library(DBI)
-library(DiagrammeR) 
-library(dplyr)
-library(DT)
-library(dygraphs)
-library(fmsb)
-library(ggfortify)
-library(ggplot2)
-library(highcharter)
-library(Hmisc)
-library(htmlTable)
-library(htmltools)
-library(htmlwidgets)
-library(knitr)
-library(lazyeval)
-library(lubridate)
-library(RColorBrewer)
-library(reshape2)
-library(stringr)
-library(survival)
-library(survMisc)
-library(tidyr)
+library(broom)         # Version ‘0.4.2’
+library(compareGroups) # Version ‘3.2.2’
+library(corrplot)      # Version ‘0.77’
+library(data.table)    # Version ‘1.10.4’
+library(DBI)           # Version ‘0.5.1’
+library(DiagrammeR)    # Version ‘0.8.4’ 
+library(dplyr)         # Version ‘0.5.0’
+library(DT)            # Version ‘0.2’
+library(dygraphs)      # Version ‘1.1.1.4’
+library(fmsb)          # Version ‘0.6.1’
+library(ggfortify)     # Version ‘0.3.0.0’
+library(ggplot2)       # Version ‘2.2.0’
+library(highcharter)   # Version ‘0.4.0’
+library(Hmisc)         # Version ‘4.0.3’
+library(htmlTable)     # Version ‘1.5’
+library(htmltools)     # Version ‘0.3.6’ 
+library(htmlwidgets)   # Version ‘0.9’
+library(knitr)         # Version ‘1.17’
+library(lazyeval)      # Version ‘0.2.0’
+library(lubridate)     # Version ‘1.6.0’
+library(RColorBrewer)  # Version ‘1.1.2’
+library(reshape2)      # Version ‘1.4.2’
+library(stringr)       # Version ‘1.2.0’
+library(survival)      # Version ‘2.40.1’
+library(survMisc)      # Version ‘0.4.6’
+library(tidyr)         # Version ‘0.6.0’
 #library(tidyverse)
-library(xtable)
-library(xts)
-library(zoo)
+library(xtable)        # Version ‘1.8.2’
+library(xts)           # Version ‘0.10.0’
+library(zoo)           # Version ‘1.8.0’

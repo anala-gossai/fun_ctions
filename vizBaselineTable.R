@@ -66,7 +66,10 @@ multiggPlot <- function(...,
   
   if (numPlots==1) {
     
-    suppressMessages(print(plots[[1]]))
+      suppressMessages(
+          suppressWarnings(
+              print(plots[[1]]
+                    )))
     
   } else {
     
@@ -82,9 +85,10 @@ multiggPlot <- function(...,
       # Get the i,j matrix positions of the regions that contain this subplot
       matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
       
-      suppressWarnings(print(plots[[i]], 
-                             vp = viewport(layout.pos.row = matchidx$row,
-                                           layout.pos.col = matchidx$col)))
+      suppressMessages(suppressWarnings(
+          print(plots[[i]], 
+                vp = viewport(layout.pos.row = matchidx$row,
+                              layout.pos.col = matchidx$col))))
     }
   }
 }
@@ -115,18 +119,19 @@ vizBaselineTable <- function(df,
   
   # Example:
   # data(iris)
+  # library(dplyr)
   # df <- iris %>%
-  #   mutate(Random = sample(c(rep("A", 10), rep("B", 5), "C"), 
-  #                          nrow(iris), 
+  #   mutate(Random = sample(c(rep("A", 10), rep("B", 5), "C"),
+  #                          nrow(iris),
   #                          replace = TRUE))
-  # vizBaselineTable(df, varnames = names(df)[-(length(names(df))) + 1], 
+  # vizBaselineTable(df, varnames = names(df)[-(length(names(df))) + 1],
   #                  groupvar = "Species",
   #                  layout = matrix(c(1, 1, 2, 3, 4, 5), 3, 2, byrow = T))
-  # vizBaselineTable(df, varnames = names(df)[-(length(names(df))) + 1], 
+  # vizBaselineTable(df, varnames = names(df)[-(length(names(df))) + 1],
   #                  groupvar = "Species")
-  # vizBaselineTable(df, varnames = names(df), 
+  # vizBaselineTable(df, varnames = names(df),
   #                  ncols = 2)
-  # vizBaselineTable(df, varnames = names(df), 
+  # vizBaselineTable(df, varnames = names(df),
   #                  layout = matrix(c(1,2,3,4,5,6), 3, 2, byrow = T))
   require(dplyr)
   require(ggplot2)
@@ -209,9 +214,10 @@ vizBaselineTable <- function(df,
     }
   }
   
-  suppressWarnings(
-      multiggPlot(plotlist = l, 
-                  layout   = layout, 
+  suppressMessages(
+      suppressWarnings(
+          multiggPlot(plotlist = l, 
+                      layout   = layout, 
                   cols     = ncols)
-  )
+  ))
 }
