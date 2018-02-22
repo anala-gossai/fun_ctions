@@ -24,7 +24,6 @@ library(stringr)       # Version ‘1.2.0’
 library(survival)      # Version ‘2.40.1’
 library(survMisc)      # Version ‘0.4.6’
 library(tidyr)         # Version ‘0.6.0’
-#library(tidyverse)
 library(xtable)        # Version ‘1.8.2’
 library(xts)           # Version ‘0.10.0’
 library(zoo)           # Version ‘1.8.0’
