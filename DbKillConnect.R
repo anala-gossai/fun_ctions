@@ -9,6 +9,7 @@ DbKillConnect <- function() {
     # DbPGConnect(pg_uid = "analagossai", 
     #             pg_pwd = "password")
     # DbKillConnect()
+    require(RPostgreSQL) # Version ‘0.4.1’
     require(purrr)
     require(DBI)
     
