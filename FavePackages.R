@@ -18,8 +18,10 @@ library(htmlwidgets)   # Version ‘0.9’
 library(knitr)         # Version ‘1.17’
 library(lazyeval)      # Version ‘0.2.0’
 library(lubridate)     # Version ‘1.6.0’
+library(purrr)         # Version ‘0.2.2’
 library(RColorBrewer)  # Version ‘1.1.2’
 library(reshape2)      # Version ‘1.4.2’
+require(RPostgreSQL)   # Version ‘0.4.1’
 library(stringr)       # Version ‘1.2.0’
 library(survival)      # Version ‘2.40.1’
 library(survMisc)      # Version ‘0.4.6’
