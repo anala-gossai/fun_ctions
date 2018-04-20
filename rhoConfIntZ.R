@@ -24,14 +24,19 @@ rhoConfIntZ <- function(rho,
     # r <- as.numeric(cor.test(x, y, method = "spearman")$estimate)
     # rhoConfIntZ(rho = r,
     #            N = n)
-    zr <- atanh(rho)
-    std.err <- sqrt(1/(N-3))
-    p <- (100 - confidence)/2/100
-    conf.p <- qnorm(p = p, mean = 0, sd = 1, lower.tail = FALSE)
-    lo.conf.lim <- tanh(zr - (std.err*conf.p))
-    hi.conf.lim <- tanh(zr + (std.err*conf.p))
-    confidence.intervals <- c(lo.conf.lim, hi.conf.lim)
-    names(confidence.intervals) <- c(paste0("Lower ", confidence, "% CI"),
-                                     paste0("Upper ", confidence, "% CI"))
+    zr                          <- atanh(rho)
+    std.err                     <- sqrt(1/(N-3))
+    p                           <- (100 - confidence)/2/100
+    conf.p                      <- qnorm(p = p, 
+                                         mean = 0, 
+                                         sd = 1, 
+                                         lower.tail = FALSE)
+    lo.conf.lim                 <- tanh(zr - (std.err*conf.p))
+    hi.conf.lim                 <- tanh(zr + (std.err*conf.p))
+    confidence.intervals        <- c(lo.conf.lim, hi.conf.lim)
+    names(confidence.intervals) <- c(
+        paste0("Lower ", confidence, "% CI"),
+        paste0("Upper ", confidence, "% CI")
+        )
     return(confidence.intervals)
 }

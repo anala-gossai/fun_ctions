@@ -28,10 +28,10 @@ iTable <- function(table_data,
     #     arrange(desc(hp)) %>% 
     #     iTable(page_length = 10)
     require(dplyr) # Version ‘0.5.0’
-    require(DT) # Version ‘0.2’
+    require(DT)    # Version ‘0.2’
     
     numeric_columns <- sapply(table_data, is.numeric)
-    format_columns <- names(table_data[, numeric_columns])
+    format_columns  <- names(table_data[, numeric_columns])
     
     if (simple == 't') {
         
