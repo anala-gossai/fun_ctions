@@ -30,6 +30,7 @@ PrintSummary <- function(data,
             `lower quartile` = quantile(cts, 0.25, na.rm = TRUE),
             median           = median(cts,         na.rm = TRUE),
             mean             = mean(cts,           na.rm = TRUE),
+            `standard error` = sd(cts / sqrt(length(cts))),
             `upper quartile` = quantile(cts, 0.75, na.rm = TRUE),
             maximum          = max(cts,            na.rm = TRUE)
         ) %>%
