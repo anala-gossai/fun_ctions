@@ -18,6 +18,7 @@ library(htmlwidgets)   # Version ‘0.9’
 library(knitr)         # Version ‘1.17’
 library(lazyeval)      # Version ‘0.2.0’
 library(lubridate)     # Version ‘1.6.0’
+library(magrittr)      # Version ‘1.5’
 library(purrr)         # Version ‘0.2.2’
 library(RColorBrewer)  # Version ‘1.1.2’
 library(reshape2)      # Version ‘1.4.2’
